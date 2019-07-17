@@ -87,7 +87,7 @@ function! HoundQF(...) abort
         return
     endif
 
-    let clean_repos = substitute(join(keys(g:hound_repo_paths, ',')), " ","","g")
+    let clean_repos = substitute(join(keys(g:hound_repo_paths), ','), " ","","g")
 
     try
         let response = hound#fetchResults(query_string, clean_repos)
